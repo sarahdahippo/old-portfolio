@@ -1,26 +1,26 @@
 body {
     background-image: url("../assets/background.png");
+    position: relative;
 }
 
-/* NAV */
+/* all sections */
+#pens, #paper, #others, #themes {
+    width: 90%;
+    margin: 0 5px 0 5px;
+}
+
+/* nav bar */
 #nav {
     display: flex;
     position: fixed;
-    right: 1vw;
+    right: 5px;
+    width: 10%;
     z-index: 1000;
     flex-direction: column;
 }
 .nav__el {
     display: flex;
     width: 10vw;
-}
-.nav__link {
-    order: 2;
-}
-.nav__link-active {
-    order: 2;
-    display: flex;
-    flex-direction: column;
 }
 .nav__link-active, a:active {
     text-decoration: underline;
@@ -38,9 +38,12 @@ body {
     color: #000;
 }
 
+/* scrolling gallery */
 .gallery {
     overflow: hidden;
     white-space: nowrap;
+    width: 83%;
+    margin-left: 3%;
 }
 .gallery ul {
     animation: marquee 25s linear infinite;
@@ -60,10 +63,8 @@ body {
     height: 200px;
     width: 200px;
 }
-#pens, #paper, #others {
-    position: relative;
-    width: 100vw;
-}
+
+/* header */
 .page-header p {
     font-family: Alegreya Sans SC;
     font-weight: bold;
@@ -81,13 +82,23 @@ h1 {
     text-shadow: 0 0 10px #000;
     margin-bottom: 0;
 }
-.pens figure {
-    display: inline-block;
-    padding-left: 1.7em;
+
+/* supplies */
+.pens, .three {
+    align-content: center;
 }
-.three figure {
+.figures {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.pens figure, .three figure {
     display: inline-block;
-    padding-left: 7em;
+    margin: 0 auto 0 auto;
+}
+.pens img, .three img {
+    width: 200px;
+    height: 200px;
 }
 figcaption {
     text-align: center;
@@ -98,14 +109,10 @@ h2 {
     font-family: Alegreya Sans SC;
     font-size: 30px;
     font-weight: bold;
-    padding-left: 1em;
     text-align: center;
 }
-.footer {
-    background-color: lavender;
-    font-family: Alegreya Sans SC;
-    text-align: center;
-}
+
+/* themes */
 .table-setup {
     margin-left: auto;
     margin-right: auto;
@@ -126,4 +133,11 @@ td, th {
     font-family: Alegreya Sans SC;
     width: 300px;
     border: 1px solid black;
+}
+
+/* footer */
+.footer {
+    background-color: lavender;
+    font-family: Alegreya Sans SC;
+    text-align: center;
 }
