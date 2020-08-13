@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url("../assets/background.png");
     position: relative;
@@ -62,6 +66,7 @@ body {
 .gallery img {
     height: 200px;
     width: 200px;
+    border-radius: 20px;
 }
 
 /* header */
@@ -99,6 +104,7 @@ h1 {
 .pens img, .three img {
     width: 200px;
     height: 200px;
+    border-radius: 20px;
 }
 figcaption {
     text-align: center;
