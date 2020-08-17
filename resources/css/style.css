@@ -1,39 +1,18 @@
+body, html {
+	margin: 0;
+	padding: 0;
+}
 html {
   scroll-behavior: smooth;
 }
-
 body {
-	background-image: url("../assets/background.png");
+	background-color: darkslateblue;
 	position: relative;
 }
 
 /* all sections */
-#pens, #paper, #others, #themes {
-  width: 90%;
-  margin: 0 5px 0 5px;
-}
-
-/* header */
-header {
-	z-index: 1000;
-	position: relative;
-}
-.page-header p {
-	font-family: Alegreya Sans SC;
-	font-weight: bold;
-	font-size: 18px;
-	text-align: center;
-}
-h1 {
-	background-image: url("../assets/header.jpeg");
-	background-size: contain;
-	text-align: center;
-	font-size: 100px;
-	font-family: Alegreya Sans SC;
-	font-weight: bold;
-	color: lavender;
-	text-shadow: 0 0 10px #000;
-	margin-bottom: 0;
+p a, p a:active, li a, li a:active {
+	color: white;
 }
 
 /* nav bar */
@@ -41,47 +20,417 @@ h1 {
 	display: flex;
 	position: fixed;
 	right: 5px;
-	width: 13%;
+	width: 10vw;
 	z-index: 999;
 	flex-direction: column;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.1);
 	height: 100%;
 	justify-content: center;
 }
-.nav__link, .nav__moon-hidden, .nav__moon-active {
-	float: left;
+.nav-element {
+	display: flex;
+	justify-content: left;
+	margin-left: 1vw;
 }
 #nav a:hover {
 	font-weight: bold;
 	font-size: 18px;
 }
-.nav__link-active, #nav a:active {
+.nav__link, .nav__link-active, .nav__link a, .nav__link-active a {
+	font-family: 'Trebuchet MS';
+	color: white;
+	margin-bottom: 1em;
+}
+.nav__link-active, .nav__link-active a {
 	text-decoration: underline;
 	font-weight: bold;
-	color: #000;
+	font-size: 18px;
 }
 .nav__link a {
-  text-decoration: none;
-  font-size: 17px;
-  color: #000;
+	text-decoration: none;
+	font-size: 17px;
 }
 .nav__moon-active, .nav__moon-hidden {
 	height: 1vh;
 	width: 1vw;
 	margin-right: 5px;
-	left: 0;
 }
 .nav__moon-hidden img {
 	height: 0%;
 	width: 0%;
 }
 
+/* home */
+#home {
+	width: 90vw;
+	height: 100vh;
+	margin: 0 4vw 0 4vw;
+	position: relative;
+}
+.home-img {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 25vw;
+}
+.home-content {
+	position: absolute;
+	width: 48vw;
+	display: flex;
+	flex-direction: column;
+	top: 50%;
+	left: 30vw;
+	transform: translate(0, -50%);
+}
+.home-title {
+	font-size: 4em;
+	font-family: Alegreya Sans SC;
+	font-weight: bold;
+	color: white;
+}
+.home-blurb {
+	font-family: Alegreya Sans SC;
+	font-size: 1.5rem;
+	color: white;
+	word-break: break-word;
+}
+
+/* about */
+#about {
+	width: 90vw;
+	height: 100vh;
+	margin: 0 4vw 0 4vw;
+	position: relative;
+}
+.about-content {
+	position: absolute;
+	width: 50vw;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: white;
+	font-size: 1em;
+	display: flex;
+	flex-direction: column;
+}
+.about-title {
+	font-size: 3em;
+	font-family: Alegreya Sans SC;
+	margin-bottom: 5%;
+}
+.about-body {
+	font-size: 1rem;
+	word-break: break-word;
+	font-family: 'Trebuchet MS';
+}
+.about-img {
+	position: absolute;
+	top: 50%;
+	left: 55vw;
+	transform: translate(0, -50%);
+	width: 25vw;
+}
+
+/* projects */
+#projects {
+	width: 90vw;
+	height: 100vh;
+	margin: 0 4vw 0 4vw;
+	position: relative;
+	color: white;
+}
+.projects-title {
+	font-size: 3em;
+	font-family: Alegreya Sans SC;
+	margin-bottom: 2%;
+}
+.projects-body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Trebuchet MS';
+}
+.projects-body .card {
+	background-color: #40367d;
+	border: 1px solid white;
+	box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
+	border-radius: 10px;
+	width: 81vw;
+	display: flex;
+	align-items: center;
+}
+.projects-body .card:hover {
+	box-shadow: 0 8px 16px 0 rgba(255,255,255,0.2);
+}
+.projects-body .card img {
+	width: 20vw;
+	margin: 2vh 1vw 2vh 1vw;
+	border-radius: 10px;
+}
+.project {
+	color: white;
+	font-size: 1em;
+	width: 58vw;
+	display: inline-block;
+	vertical-align: top;
+	word-break: break-word;
+}
+.project li {
+	margin-bottom: 2vh;
+}
+.projects-bottom {
+	margin-top: 5%;
+	margin-bottom: 2%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.button {
+	font-family: 'Trebuchet MS';
+	font-size: 1em;
+	color: black;
+	font-weight: bold;
+	background-color: white;
+	border-radius: 10px;
+	float: right;
+	margin-right: 5%;
+	border: none;
+	padding: 4px 10px 4px 10px;
+	height: 100%;
+	box-shadow: 4px 4px 2px rgba(255,255,255,0.3);
+}
+.button:hover {
+	background-color: lightgrey;
+	cursor: pointer;
+}
+.button:active {
+	background-color: lightgrey;
+	cursor: pointer;
+	transform: translate(4px, 4px);
+	box-shadow: 0 5px lightgrey;
+}
+.label {
+	border-radius: 20px;
+	padding: 2px 6px 2px 6px;
+	color: darkslateblue;
+	font-size: 0.9em;
+}
+.labelFigma {
+	background-color: #FF586C;
+}
+.labelReact {
+	background-color: #2CDACF;
+}
+.labelJs {
+	background-color: yellow;
+}
+.labelHtml {
+	background-color: darkorange;
+}
+.labelBs{
+	background-color: plum;
+}
+.labelCss {
+	background-color: deepskyblue;
+}
+.labelNode {
+	background-color: darkseagreen;
+}
+.labelExp {
+	background-color: ghostwhite;
+}
+.labelMongo {
+	background-color: limegreen;
+}
+
+/* project modal */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	font-family: 'Trebuchet MS';
+}
+.modal-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 2vw 0 2vw;
+}
+.modal-header h1 {
+	color: white;
+}
+.close {
+	color: lightslategrey;
+	float: right;
+	font-size: 35px;
+	font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-content {
+	background-color: #2b2453;
+	border-radius: 20px;
+	width: 80%;
+	padding: 20px;
+	margin: 15% auto;
+	text-align: center;
+	border: 1px solid white;
+}
+#project1Modal img {
+	border-radius: 20px;
+	width: 85%;
+}
+
+/* design */
+#design {
+	width: 90vw;
+	height: 300vh;
+	margin: 0 4vw 0 4vw;
+	position: relative;
+	color: white;
+}
+.design-title {
+	font-size: 3em;
+	font-family: Alegreya Sans SC;
+}
+.design-body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Trebuchet MS';
+}
+.design-body p {
+	font-size: 1rem;
+	word-break: break-word;
+	width: 81vw;
+	margin-bottom: 5%;
+}
+.design-body .card {
+	background-color: #40367d;
+	border: 1px solid white;
+	box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
+	border-radius: 10px;
+	width: 81vw;
+	height: auto;
+	margin-bottom: 5%;
+	display: flex;
+	align-items: center;
+}
+.design-body .card:hover {
+	box-shadow: 0 8px 16px 0 rgba(255,255,255,0.2);
+}
+.design-body .card img {
+	width: 20vw;
+	margin: 2vh 1vw 2vh 1vw;
+	border-radius: 10px;
+}
+.design {
+	color: white;
+	font-size: 1em;
+	width: 58vw;
+	display: inline-block;
+	vertical-align: top;
+	word-break: break-word;
+}
+.design li {
+	margin-bottom: 2vh;
+}
+.design-bottom {
+	margin-top: 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 2%;
+}
+.labelAI {
+	background-color: orange;
+}
+.labelPS {
+	background-color: lightskyblue;
+}
+.button a, .button a:active {
+	text-decoration: none;
+	color: black;
+}
+.design2 {
+	margin-left: 2vw;
+}
+
+/* art */
+#art {
+	width: 90vw;
+	height: 200vh;
+	margin: 0 4vw 0 4vw;
+	position: relative;
+	color: white;
+}
+.art-title {
+	font-size: 3em;
+	font-family: Alegreya Sans SC;
+}
+.art-body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Trebuchet MS';
+}
+.art-body p {
+	font-size: 1rem;
+	word-break: break-word;
+	width: 81vw;
+	margin-bottom: 5%;
+}
+.card-vert {
+	background-color: #40367d;
+	border: 1px solid white;
+	box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
+	border-radius: 10px;
+	width: 35vw;
+	margin-bottom: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.card-vert:hover {
+	box-shadow: 0 8px 16px 0 rgba(255,255,255,0.2);
+}
+.card-vert img {
+	width: 25vw;
+	margin: 2vh 1vw 2vh 1vw;
+	border-radius: 10px;
+}
+.card-vert .caption {
+	margin-bottom: 2vw;
+}
+.graphicDesign {
+	display: flex;
+	flex-direction: column;
+	width: 81vw;
+}
+.graphicDesign h1 {
+	display: flex;
+	justify-content: center;
+	font-family: 'Trebuchet MS';
+	font-size: 2em;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	grid-gap: 2em;
+}
+
 /* scrolling gallery */
 .gallery {
   overflow: hidden;
   white-space: nowrap;
-  width: 83%;
-  margin-left: 3%;
+  width: 81vw;
 }
 .gallery ul {
   animation: marquee 25s linear infinite;
@@ -103,64 +452,21 @@ h1 {
   border-radius: 20px;
 }
 
-/* supplies */
-.pens, .three {
-  align-content: center;
-}
-.figures {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-}
-.pens figure, .three figure {
-  display: inline-block;
-  margin: 0 auto 0 auto;
-}
-.pens img, .three img {
-  width: auto;
-  height: 200px;
-  border-radius: 20px;
-}
-figcaption {
-  text-align: center;
-  font-family: Alegreya Sans SC;
-  font-size: 17px;
-}
-h2 {
-  font-family: Alegreya Sans SC;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* themes */
-.table-setup {
-  margin-left: auto;
-  margin-right: auto;
-  table-layout: auto;
-  border-collapse: collapse;
-}
-td {
-  font-size: 20px;
-  background-color: white;
-  padding: 5px 0 5px 0;
-}
-th {
-  font-size: 25px;
-  background-color: mediumpurple;
-}
-td, th {
-  text-align: center;
-  font-family: Alegreya Sans SC;
-  width: 300px;
-  border: 1px solid black;
-}
-
 /* footer */
 .footer {
 	background-color: lavender;
 	font-family: Alegreya Sans SC;
 	text-align: center;
 	z-index: 1000;
-	position: relative;
+	height: 7vh;
+	width: 100vw;
+	padding-top: 10px;
+}
+.footer-socials {
+	display: flex;
+	justify-content: center;
+	grid-gap: 2em;
+}
+.footer img {
+	width: 5vh;
 }
