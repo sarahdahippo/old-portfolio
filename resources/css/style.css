@@ -133,7 +133,7 @@ p a, p a:active, li a, li a:active {
 /* projects */
 #projects {
 	width: 90vw;
-	height: 100vh;
+	height: 150vh;
 	margin: 0 4vw 0 4vw;
 	position: relative;
 	color: white;
@@ -156,6 +156,7 @@ p a, p a:active, li a, li a:active {
 	width: 81vw;
 	display: flex;
 	align-items: center;
+	margin-bottom: 5%;
 }
 .projects-body .card:hover {
 	box-shadow: 0 8px 16px 0 rgba(255,255,255,0.2);
@@ -172,6 +173,9 @@ p a, p a:active, li a, li a:active {
 	display: inline-block;
 	vertical-align: top;
 	word-break: break-word;
+}
+.project1 {
+	margin-left: 2vw;
 }
 .project li {
 	margin-bottom: 2vh;
@@ -240,6 +244,15 @@ p a, p a:active, li a, li a:active {
 .labelMongo {
 	background-color: limegreen;
 }
+.labelPostgresql {
+	background-color: lightsteelblue;
+}
+.labelTs {
+	background-color: dodgerblue;
+}
+.labelAd {
+	background-color: indianred;
+}
 
 /* project modal */
 .modal {
@@ -292,7 +305,7 @@ p a, p a:active, li a, li a:active {
 /* design */
 #design {
 	width: 90vw;
-	height: 450vh;
+	height: 470vh;
 	margin: 0 4vw 0 4vw;
 	position: relative;
 	color: white;
@@ -412,7 +425,7 @@ p a, p a:active, li a, li a:active {
 /* art */
 #art {
 	width: 90vw;
-	height: 130vh;
+	height: 170vh;
 	margin: 0 4vw 0 4vw;
 	position: relative;
 	color: white;
@@ -440,10 +453,13 @@ p a, p a:active, li a, li a:active {
   width: 81vw;
 }
 .gallery ul {
-  animation: marquee 25s linear infinite;
+  animation: marquee 20s linear infinite;
+}
+.gallery3 ul {
+  animation-delay: 0.5s;
 }
 .gallery2 ul {
-  animation-delay: 0.5s;
+	animation: marquee2 20s linear infinite;
 }
 .gallery ul li {
   display: inline;
@@ -451,7 +467,11 @@ p a, p a:active, li a, li a:active {
 }
 @keyframes marquee {
   0%   { transform: translate(0, 0); }
-  100% { transform: translate(-100%, 0); }
+  100% { transform: translate(-65%, 0); }
+}
+@keyframes marquee2 {
+  0%   { transform: translate(-65%, 0); }
+  100% { transform: translate(0, 0); }
 }
 .gallery img {
   height: 200px;
@@ -475,5 +495,5 @@ p a, p a:active, li a, li a:active {
 	grid-gap: 2em;
 }
 .footer img {
-	width: 3vh;
+	width: 4vh;
 }
