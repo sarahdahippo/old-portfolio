@@ -87,6 +87,19 @@ p a, p a:active, li a, li a:active {
 	font-family: Alegreya Sans SC;
 	font-weight: bold;
 	color: white;
+	overflow: hidden;
+	border-right: .15em solid white;
+	white-space: nowrap;
+	animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from {width: 0;}
+  to {width: 85%;}
+}
+@keyframes blinkTextCursor{
+  from {border-right-color: white;}
+  to {border-right-color: transparent;}
 }
 .home-blurb {
 	font-family: Alegreya Sans SC;
