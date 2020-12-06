@@ -3,11 +3,12 @@ body, html {
 	padding: 0;
 }
 html {
-  scroll-behavior: smooth;
+  	scroll-behavior: smooth;
 }
 body {
 	background-color: darkslateblue;
 	position: relative;
+	overflow-x: hidden;
 }
 
 /* all sections */
@@ -17,18 +18,21 @@ p a, p a:active, li a, li a:active {
 
 /* nav bar */
 #nav {
-	display: flex;
 	position: fixed;
-	right: 5px;
-	width: 10vw;
+	width: 100%;
+	height: 7%;
 	z-index: 999;
-	flex-direction: column;
 	background-color: rgba(255, 255, 255, 0.1);
-	height: 100%;
+}
+#navLinks {
+	margin-top: 1%;
+	display: flex;
+	flex-direction: row;
 	justify-content: center;
 }
 .nav-element {
 	display: flex;
+	flex-direction: row;
 	justify-content: left;
 	margin-left: 1vw;
 }
@@ -39,7 +43,7 @@ p a, p a:active, li a, li a:active {
 .nav__link, .nav__link-active, .nav__link a, .nav__link-active a {
 	font-family: 'Trebuchet MS';
 	color: white;
-	margin-bottom: 1em;
+	margin-right: 1em;
 }
 .nav__link-active, .nav__link-active a {
 	text-decoration: underline;
@@ -82,44 +86,20 @@ p a, p a:active, li a, li a:active {
 
 /* home */
 #home {
-	width: 90vw;
+	display: flex;
 	height: 100vh;
 	margin: 0 4vw 0 4vw;
-	position: relative;
+	align-items: center;
+}
+.home-img {
+	width: 30%;
 }
 .home-img img {
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
-	width: 25vw;
-}
-@media screen and (max-width: 600px) {
-	#home {
-		display: flex;
-		justify-content: center;
-	}
-	.home-img {
-		top: 30%;
-	}
-	.home-content {
-		width: 80vw !important;
-		left: 3vw !important;
-	}
-	.home-title {
-		font-size: 7vw !important;
-	}
-	.home-blurb {
-		font-size: 3vw !important;
-	}
+	width: 100%;
 }
 .home-content {
-	position: absolute;
-	width: 48vw;
-	display: flex;
-	flex-direction: column;
-	top: 50%;
-	left: 30vw;
-	transform: translate(0, -50%);
+	width: 65%;
+	margin-left: 5%;
 }
 .home-title {
 	font-size: 5vw;
@@ -146,23 +126,27 @@ p a, p a:active, li a, li a:active {
 	color: white;
 	word-break: break-word;
 }
+@media (max-width: 767px) {
+	#home {
+		flex-direction: column-reverse;
+	}
+	.home-content,
+	.home-img {
+		width: auto;
+	}
+}
 
 /* about */
 #about {
-	width: 90vw;
-	height: 100vh;
 	margin: 0 4vw 0 4vw;
-	position: relative;
+	display: flex;
+	height: 100vh;
+	align-items: center;
 }
 .about-content {
-	position: absolute;
-	width: 50vw;
-	top: 50%;
-	transform: translate(0, -50%);
 	color: white;
 	font-size: 1em;
-	display: flex;
-	flex-direction: column;
+	width: 70%;
 }
 .about-title {
 	font-size: 3em;
@@ -175,19 +159,25 @@ p a, p a:active, li a, li a:active {
 	font-family: 'Trebuchet MS';
 }
 .about-img {
-	position: absolute;
-	top: 50%;
-	left: 55vw;
-	transform: translate(0, -50%);
-	width: 25vw;
+	width: 30%;
+}
+.about-img img {
+	width: 100%;
+}
+@media (max-width: 767px) {
+	#about {
+		flex-direction: column-reverse;
+	}
+	.about-content,
+	.about-img {
+		width: auto;
+	}
 }
 
 /* projects */
 #projects {
-	width: 90vw;
-	height: 150vh;
+	align-items: center;
 	margin: 0 4vw 0 4vw;
-	position: relative;
 	color: white;
 }
 .projects-title {
@@ -205,9 +195,10 @@ p a, p a:active, li a, li a:active {
 	border: 1px solid white;
 	box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
 	border-radius: 10px;
-	width: 81vw;
+	width: 100%;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	margin-bottom: 5%;
 }
 .projects-body .card:hover {
@@ -221,12 +212,9 @@ p a, p a:active, li a, li a:active {
 .project {
 	color: white;
 	font-size: 1em;
-	width: 58vw;
 	display: inline-block;
 	vertical-align: top;
 	word-break: break-word;
-}
-.project1 {
 	margin-left: 2vw;
 }
 .project li {
@@ -356,10 +344,8 @@ p a, p a:active, li a, li a:active {
 
 /* design */
 #design {
-	width: 90vw;
-	height: 470vh;
+	align-items: center;
 	margin: 0 4vw 0 4vw;
-	position: relative;
 	color: white;
 }
 .design-title {
@@ -374,7 +360,6 @@ p a, p a:active, li a, li a:active {
 .design-body p {
 	font-size: 1rem;
 	word-break: break-word;
-	width: 81vw;
 	margin-bottom: 5%;
 }
 .design-body .card {
@@ -382,11 +367,10 @@ p a, p a:active, li a, li a:active {
 	border: 1px solid white;
 	box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
 	border-radius: 10px;
-	width: 81vw;
-	height: auto;
 	margin-bottom: 5%;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 .design-body .card:hover {
 	box-shadow: 0 8px 16px 0 rgba(255,255,255,0.2);
@@ -399,10 +383,10 @@ p a, p a:active, li a, li a:active {
 .design {
 	color: white;
 	font-size: 1em;
-	width: 58vw;
 	display: inline-block;
 	vertical-align: top;
 	word-break: break-word;
+	margin-left: 2vw;
 }
 .design li {
 	margin-bottom: 2vh;
@@ -432,7 +416,8 @@ p a, p a:active, li a, li a:active {
 	border: 1px solid white;
 	box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
 	border-radius: 10px;
-	width: 35vw;
+	width: 30vw;
+	height: 30vw;
 	margin-bottom: 5%;
 	display: flex;
 	flex-direction: column;
@@ -447,19 +432,12 @@ p a, p a:active, li a, li a:active {
 	margin: 2vh 1vw 2vh 1vw;
 	border-radius: 10px;
 }
-#teenyGif {
-	width: 30vw;
-}
-#whale {
-	width: 30vw;
-}
 .card-vert .caption {
 	margin-bottom: 2vw;
 }
 .graphicDesign {
 	display: flex;
 	flex-direction: column;
-	width: 81vw;
 }
 .graphicDesign h1 {
 	display: flex;
@@ -476,11 +454,9 @@ p a, p a:active, li a, li a:active {
 
 /* art */
 #art {
-	width: 90vw;
-	height: 170vh;
 	margin: 0 4vw 0 4vw;
-	position: relative;
 	color: white;
+	align-items: center;
 }
 .art-title {
 	font-size: 3em;
@@ -494,15 +470,13 @@ p a, p a:active, li a, li a:active {
 .art-body p {
 	font-size: 1rem;
 	word-break: break-word;
-	width: 81vw;
-	margin-bottom: 5%;
+	margin-bottom: 1vh;
 }
 
 /* scrolling gallery */
 .gallery {
   overflow: hidden;
   white-space: nowrap;
-  width: 81vw;
 }
 .gallery ul {
   animation: marquee 20s linear infinite;
@@ -540,6 +514,7 @@ p a, p a:active, li a, li a:active {
 	height: 7vh;
 	width: 100vw;
 	padding-top: 10px;
+	margin-top: 5vh;
 }
 .footer-socials {
 	display: flex;
