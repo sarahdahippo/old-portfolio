@@ -1,14 +1,12 @@
 # Sarah's Portfolio
-(A work in progress)
 My personal portfolio depicting my tech and non-tech (art) projects.
 
-To view: run
-```git clone https://github.com/sarahdahippo/sarahs-portfolio.git```
-and open index.html in your browser.
-
-*Github Page coming soon...*
+Check it out at https://sarahdahippo.github.io/
 
 ### Tech Stacks
+Made with pure
 - HTML5
 - CSS3
 - JavaScript
+
+to familiarize myself with the basics, and experiment with making static webpages more interactive.
