@@ -11,53 +11,63 @@
 </head>
 
 <body>
-	<a href="javascript:void(0);" class="hamburgerNav" onclick="hamburgerNav()">
-		<img src="resources/assets/hamburger.svg">
-	</a>
-	<section id="nav">
-		<div id="navLinks">
-			<div class="nav-element">
-				<div id="home__moon" class="nav__moon-hidden">
-					<img src="resources/assets/moon.svg">
+	<div class="topnav">
+		<section id="nav">
+			<div id="navLinks">
+				<div class="nav-element">
+					<div id="home__moon" class="nav__moon-hidden">
+						<img src="resources/assets/moon.svg">
+					</div>
+					<div id="home__link" class="nav__link">
+						<a href="#home">Home</a>
+					</div>
 				</div>
-				<div id="home__link" class="nav__link">
-					<a href="#home">Home</a>
+				<div class="nav-element">
+					<div id="about__moon" class="nav__moon-hidden">
+						<img src="resources/assets/moon.svg">
+					</div>
+					<div id="about__link" class="nav__link">
+						<a href="#about">About Me</a>
+					</div>
+				</div>
+				<div class="nav-element">
+					<div id="projects__moon" class="nav__moon-hidden">
+						<img src="resources/assets/moon.svg">
+					</div>
+					<div id="projects__link" class="nav__link">
+						<a href="#projects">Projects</a>
+					</div>
+				</div>
+				<div class="nav-element">
+					<div id="design__moon" class="nav__moon-hidden">
+						<img src="resources/assets/moon.svg">
+					</div>
+					<div id="design__link" class="nav__link">
+						<a href="#design">Design</a>
+					</div>
+				</div>
+				<div class="nav-element">
+					<div id="art__moon" class="nav__moon-hidden">
+						<img src="resources/assets/moon.svg">
+					</div>
+					<div id="art__link" class="nav__link">
+						<a href="#art">Art</a>
+					</div>
+				</div>
+				<div class="nav-element">
+					<div id="footer__moon" class="nav__moon-hidden">
+						<img src="resources/assets/moon.svg">
+					</div>
+					<div id="footer__link" class="nav__link">
+						<a href="#footer">Contact</a>
+					</div>
 				</div>
 			</div>
-			<div class="nav-element">
-				<div id="about__moon" class="nav__moon-hidden">
-					<img src="resources/assets/moon.svg">
-				</div>
-				<div id="about__link" class="nav__link">
-					<a href="#about">About Me</a>
-				</div>
-			</div>
-			<div class="nav-element">
-				<div id="projects__moon" class="nav__moon-hidden">
-					<img src="resources/assets/moon.svg">
-				</div>
-				<div id="projects__link" class="nav__link">
-					<a href="#projects">Projects</a>
-				</div>
-			</div>
-			<div class="nav-element">
-				<div id="design__moon" class="nav__moon-hidden">
-					<img src="resources/assets/moon.svg">
-				</div>
-				<div id="design__link" class="nav__link">
-					<a href="#design">Design</a>
-				</div>
-			</div>
-			<div class="nav-element">
-				<div id="art__moon" class="nav__moon-hidden">
-					<img src="resources/assets/moon.svg">
-				</div>
-				<div id="art__link" class="nav__link">
-					<a href="#art">Art</a>
-				</div>
-			</div>
-		</div>
-	</section>
+		</section>
+		<a href="javascript:void(0);" class="hamburgerNav" onclick="hamburgerNav()">
+			<img src="resources/assets/hamburger.svg">
+		</a>
+	</div>
 
 	<section class="home" id="home">
 		<div class="home-img">
@@ -121,7 +131,7 @@
 			<div class="card">
 				<img src="resources/assets/jobManagerSmall.png">
 				<div class="project projectRight">
-					<h1><b>Task Manager</b></h1>
+					<h1><b>Task Manager (Software Engineering Intern)</b></h1>
 					<ul>
 						<li>Designed a wireframe using Figma for a feature to create, delete, edit and send tasks to robots</li>
 						<li>Implemented this system on the frontend using React, JavaScript, HTML5 and CSS3</li>
@@ -340,7 +350,7 @@
 		</div>
 	</section>
 
-	<section class="footer">
+	<section class="footer" id="footer">
 		<div class="footer-socials">
 			<a class="insta" href="https://www.instagram.com/eurekapalette/">
 				<img src="resources/assets/social/instagram.svg">

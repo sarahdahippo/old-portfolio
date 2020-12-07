@@ -17,15 +17,16 @@ p a, p a:active, li a, li a:active {
 }
 
 /* nav bar */
-#nav {
+.topnav {
 	position: fixed;
 	width: 100%;
-	height: 7%;
 	z-index: 999;
+}
+.topnav #nav {
 	background-color: rgba(255, 255, 255, 0.1);
 }
 #navLinks {
-	margin-top: 1%;
+	padding: 1% 0 1% 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -55,7 +56,7 @@ p a, p a:active, li a, li a:active {
 	font-size: 17px;
 }
 .nav__moon-active, .nav__moon-hidden {
-	height: 1vh;
+	height: 1vw;
 	width: 1vw;
 	margin-right: 5px;
 }
@@ -65,21 +66,22 @@ p a, p a:active, li a, li a:active {
 }
 .hamburgerNav {
 	display: none;
-	background-color: none;
-	width: 2vw;
 }
 @media screen and (max-width: 600px) {
 	.hamburgerNav {
 		display: block;
-		background-color: none;
-		width: 5vw;
+		padding: 5% 5%;
+		text-decoration: none;
 		float: right;
-		margin: 5vh 2vw 0 0;
+		width: 5vh;
 	}
-	#nav {
+	#navLinks {
 		display: none;
 	}
-	#nav a:hover {
+	.topnav #nav {
+		background-color: none;
+	}
+	.topnav a:hover {
 		background-color: indigo;
 	}
 }
@@ -130,9 +132,12 @@ p a, p a:active, li a, li a:active {
 	#home {
 		flex-direction: column-reverse;
 	}
-	.home-content,
 	.home-img {
-		width: auto;
+		margin-top: 10vh;
+		width: 50%;
+	}
+	.home {
+		justify-content: center;
 	}
 }
 
@@ -167,17 +172,21 @@ p a, p a:active, li a, li a:active {
 @media (max-width: 767px) {
 	#about {
 		flex-direction: column-reverse;
+		justify-content: center;
 	}
-	.about-content,
-	.about-img {
+	.about-content {
 		width: auto;
+	}
+	.about-img {
+		margin-bottom: 5vh;
+		width: 50%;
 	}
 }
 
 /* projects */
 #projects {
 	align-items: center;
-	margin: 0 4vw 0 4vw;
+	margin: 0 4vw 10vh 4vw;
 	color: white;
 }
 .projects-title {
@@ -293,6 +302,14 @@ p a, p a:active, li a, li a:active {
 .labelAd {
 	background-color: indianred;
 }
+@media (max-width: 700px) {
+	.projects-body .card {
+		flex-direction: column-reverse;
+	}
+	.projects-body .card img {
+		width: 60vw;
+	}
+}
 
 /* project modal */
 .modal {
@@ -345,7 +362,7 @@ p a, p a:active, li a, li a:active {
 /* design */
 #design {
 	align-items: center;
-	margin: 0 4vw 0 4vw;
+	margin: 0 4vw 10vh 4vw;
 	color: white;
 }
 .design-title {
@@ -411,6 +428,22 @@ p a, p a:active, li a, li a:active {
 .design2 {
 	margin-left: 2vw;
 }
+.graphicDesign {
+	display: flex;
+	flex-direction: column;
+}
+.graphicDesign h1 {
+	display: flex;
+	justify-content: center;
+	font-family: 'Trebuchet MS';
+	font-size: 2em;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	grid-gap: 2em;
+}
 .card-vert {
 	background-color: #40367d;
 	border: 1px solid white;
@@ -435,21 +468,23 @@ p a, p a:active, li a, li a:active {
 .card-vert .caption {
 	margin-bottom: 2vw;
 }
-.graphicDesign {
-	display: flex;
-	flex-direction: column;
-}
-.graphicDesign h1 {
-	display: flex;
-	justify-content: center;
-	font-family: 'Trebuchet MS';
-	font-size: 2em;
-}
-.row {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	grid-gap: 2em;
+@media (max-width: 700px) {
+	.graphicDesign {
+		align-items: center;
+	}
+	.graphicDesign .row, .design-body .card {
+		flex-direction: column-reverse;
+	}
+	.graphicDesign .row {
+		margin-bottom: 4vh;
+	}
+	.card-vert {
+		width: 80vw;
+		height: 80vw;
+	}
+	.design-body .card img, .card-vert img {
+		width: 60vw;
+	}
 }
 
 /* art */

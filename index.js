@@ -38,7 +38,7 @@ function activeScroll() {
 }
 
 function hamburgerNav() {
-  var x = document.getElementById("nav");
+  var x = document.getElementById("navLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
