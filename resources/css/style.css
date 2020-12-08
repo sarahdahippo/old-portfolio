@@ -104,7 +104,7 @@ p a, p a:active, li a, li a:active {
 	margin-left: 5%;
 }
 .home-title {
-	font-size: 5vw;
+	font-size: 64px;
 	font-family: Alegreya Sans SC;
 	font-weight: bold;
 	color: white;
@@ -124,7 +124,7 @@ p a, p a:active, li a, li a:active {
 }
 .home-blurb {
 	font-family: 'Trebuchet MS';
-	font-size: 2vw;
+	font-size: 24px;
 	color: white;
 	word-break: break-word;
 }
@@ -132,9 +132,18 @@ p a, p a:active, li a, li a:active {
 	#home {
 		flex-direction: column-reverse;
 	}
+	.home-content {
+		width: 80%;
+	}
+	.home-title {
+		font-size: 7vw;
+	}
+	.home-blurb {
+		font-size: 16px;
+	}
 	.home-img {
 		margin-top: 10vh;
-		width: 50%;
+		width: 60%;
 	}
 	.home {
 		justify-content: center;
@@ -173,6 +182,7 @@ p a, p a:active, li a, li a:active {
 	#about {
 		flex-direction: column-reverse;
 		justify-content: center;
+		margin-bottom: 10vh;
 	}
 	.about-content {
 		width: auto;
@@ -260,6 +270,10 @@ p a, p a:active, li a, li a:active {
 	transform: translate(4px, 4px);
 	box-shadow: 0 5px lightgrey;
 }
+.labels {
+	display: flex;
+	flex-wrap: wrap;
+}
 .label {
 	border-radius: 20px;
 	padding: 2px 6px 2px 6px;
@@ -303,11 +317,17 @@ p a, p a:active, li a, li a:active {
 	background-color: indianred;
 }
 @media (max-width: 700px) {
-	.projects-body .card {
+	.projects-body .card, .projects-bottom {
 		flex-direction: column-reverse;
 	}
 	.projects-body .card img {
-		width: 60vw;
+		width: 40vw;
+	}
+	.label {
+		font-size: 12px;
+	}
+	.button {
+		margin-bottom: 5vh;
 	}
 }
 
@@ -472,18 +492,18 @@ p a, p a:active, li a, li a:active {
 	.graphicDesign {
 		align-items: center;
 	}
-	.graphicDesign .row, .design-body .card {
+	.graphicDesign .row, .design-body .card, .design-bottom {
 		flex-direction: column-reverse;
 	}
 	.graphicDesign .row {
 		margin-bottom: 4vh;
 	}
 	.card-vert {
-		width: 80vw;
-		height: 80vw;
+		width: 60vw;
+		height: 60vw;
 	}
 	.design-body .card img, .card-vert img {
-		width: 60vw;
+		width: 40vw;
 	}
 }
 
