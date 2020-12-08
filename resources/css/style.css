@@ -82,7 +82,11 @@ p a, p a:active, li a, li a:active {
 		background-color: none;
 	}
 	.topnav a:hover {
-		background-color: indigo;
+		background-color: 2b2b2b;
+	}
+	.nav__moon-active, .nav__moon-hidden {
+		height: 3vw;
+		width: 3vw;
 	}
 }
 
@@ -104,7 +108,7 @@ p a, p a:active, li a, li a:active {
 	margin-left: 5%;
 }
 .home-title {
-	font-size: 64px;
+	font-size: 6vw;
 	font-family: Alegreya Sans SC;
 	font-weight: bold;
 	color: white;
@@ -499,11 +503,11 @@ p a, p a:active, li a, li a:active {
 		margin-bottom: 4vh;
 	}
 	.card-vert {
-		width: 60vw;
-		height: 60vw;
+		width: 70vw;
+		height: 70vw;
 	}
 	.design-body .card img, .card-vert img {
-		width: 40vw;
+		width: 50vw;
 	}
 }
 
