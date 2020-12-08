@@ -578,7 +578,7 @@ p a, p a:active, li a, li a:active {
 .footer-socials {
 	display: flex;
 	justify-content: center;
-	grid-gap: 2em;
+	grid-gap: 5vw;
 }
 .footer img {
 	width: 4vh;
