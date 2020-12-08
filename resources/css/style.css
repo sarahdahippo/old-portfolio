@@ -82,7 +82,7 @@ p a, p a:active, li a, li a:active {
 		background-color: none;
 	}
 	.topnav a:hover {
-		background-color: 2b2b2b;
+		background-color: #2b2b2b;
 	}
 	.nav__moon-active, .nav__moon-hidden {
 		height: 3vw;
@@ -138,9 +138,6 @@ p a, p a:active, li a, li a:active {
 	}
 	.home-content {
 		width: 80%;
-	}
-	.home-title {
-		font-size: 7vw;
 	}
 	.home-blurb {
 		font-size: 16px;
