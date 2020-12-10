@@ -553,28 +553,26 @@ p a, p a:active, li a, li a:active {
 	animation: marquee2 20s linear infinite;
 }
 .gallery ul li {
-  display: inline;
-  margin: 0 10px 0 10px;
+	display: inline;
+	margin: 0 10px 0 10px;
 }
 @keyframes marquee {
-  0%   { transform: translate(0, 0); }
-  100% { transform: translate(-65%, 0); }
+	0%   { transform: translate(0, 0); }
+	100% { transform: translate(-65%, 0); }
 }
 @keyframes marquee2 {
-  0%   { transform: translate(-65%, 0); }
-  100% { transform: translate(0, 0); }
+	0%   { transform: translate(-65%, 0); }
+	100% { transform: translate(0, 0); }
 }
 .gallery img {
-  height: 200px;
-  width: auto;
-  border-radius: 20px;
+	height: 200px;
+	width: auto;
+	border-radius: 20px;
 }
 @media (max-width: 767px) {
-	.gallery ul {
-	  animation: marquee 10s linear infinite;
-	}
-	.gallery2 ul {
-		animation: marquee2 10s linear infinite;
+	.gallery ul, .gallery2 ul {
+		animation: none;
+		overflow: scroll;
 	}
 }
 
