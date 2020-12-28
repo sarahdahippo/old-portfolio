@@ -445,6 +445,10 @@ p a, p a:active, li a, li a:active {
 	justify-content: space-between;
 	margin-bottom: 2%;
 }
+.buttons {
+	display: flex;
+	flex-direction: row;
+}
 .labelAI {
 	background-color: orange;
 }
