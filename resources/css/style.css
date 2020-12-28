@@ -283,6 +283,7 @@ p a, p a:active, li a, li a:active {
 .labels {
 	display: flex;
 	flex-wrap: wrap;
+	height: min-content;
 }
 .label {
 	border-radius: 20px;
