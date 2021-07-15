@@ -315,16 +315,16 @@ p a, p a:active, li a, li a:active {
 .labelExp {
 	background-color: ghostwhite;
 }
-.labelMongo {
+.labelLimeGreen {
 	background-color: limegreen;
 }
-.labelPostgresql {
+.labelLightBlue {
 	background-color: lightsteelblue;
 }
 .labelTs {
 	background-color: dodgerblue;
 }
-.labelAd {
+.labelRed {
 	background-color: indianred;
 }
 @media (max-width: 700px) {
