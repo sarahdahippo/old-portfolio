@@ -496,7 +496,7 @@ p a, p a:active, li a, li a:active {
 	box-shadow: 0 8px 16px 0 rgba(255,255,255,0.2);
 }
 .card-vert img {
-	width: 25vw;
+	width: 20vw;
 	margin: 2vh 1vw 2vh 1vw;
 	border-radius: 10px;
 }
