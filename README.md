@@ -1,7 +1,5 @@
 # Sarah's Portfolio
-My personal portfolio depicting my tech and non-tech (art) projects.
-
-Check it out at https://sarahdahippo.github.io/
+My (first) personal portfolio depicting my tech and non-tech (art) projects.
 
 ### Tech Stacks
 Made with pure
